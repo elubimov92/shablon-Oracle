@@ -1,0 +1,43 @@
+<div class="oj-flex" style="min-width: 300px;">
+  <div class="oj-flex-item">
+    <calendar-popup data-bind="attr: {id: parentData.activeDate}" data="{{calendarPopupParams}}"></calendar-popup>
+    <div data-bind="attr: {id: calendarId}">
+      <div id="tabs" data-bind="ojComponent:{component: 'ojTabs'}, css: {'align-center': isMultitabCalendar }">
+
+        <!--Period toggle-->
+        <ul>
+          <!-- ko foreach: periods -->
+          <!-- ko if: $parent.showTab(id) -->
+          <li data-bind="click: function() { $parent.changeType(id); $parent.popup.close(); }">
+            <span data-bind="text: label"></span>
+          </li>
+          <!-- /ko -->
+          <!-- /ko -->
+        </ul>
+
+        <!--Tab contents-->
+        <!-- ko if: showTab('day') -->
+        <div id="tabs-1">
+          <calendar-tab-content data="[[calendarTabContentParams]]"></calendar-tab-content>
+        </div>
+        <!-- /ko -->
+        <!-- ko if: showTab('week') -->
+        <div id="tabs-2">
+          <calendar-tab-content data="[[calendarTabContentParams]]"></calendar-tab-content>
+        </div>
+        <!-- /ko -->
+        <!-- ko if: showTab('month') -->
+        <div id="tabs-3">
+          <calendar-tab-content data="[[calendarTabContentParams]]"></calendar-tab-content>
+        </div>
+        <!-- /ko -->
+        <!-- ko if: showTab('year') -->
+        <div id="tabs-4">
+          <calendar-tab-content data="[[calendarTabContentParams]]"></calendar-tab-content>
+        </div>
+        <!-- /ko -->
+
+      </div>
+    </div>
+  </div>
+</div>

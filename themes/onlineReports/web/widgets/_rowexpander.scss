@@ -1,0 +1,42 @@
+table {
+  &.oj-table-element {
+    border-collapse: separate;
+    border-spacing: 0 5px;
+
+    .oj-table-body-row {
+      .oj-table-data-cell {
+        &.expand-button {
+          background-color: #eaeff4;
+          width: 21px;
+          a {
+            color: $iconColorDefault !important;
+            &:before {
+              -webkit-transform: scale(-1, 1) rotate(90deg);
+              transform: scale(-1, 1) rotate(90deg);
+              content: "\e605";
+            }
+            &.oj-rowexpander-collapse-icon {
+              &:before {
+                -webkit-transform: scale(-1, 1) rotate(-90deg);
+                transform: scale(-1, 1) rotate(-90deg);
+                content: "\e605";
+              }
+            }
+          }
+        }
+      }
+      &.row-external {
+        &.oj-table-body-current-row {
+          .oj-table-data-cell {
+            &.expand-button {
+              background-color: #182933;
+              a {
+                color: $buttonTextColor !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

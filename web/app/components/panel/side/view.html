@@ -1,0 +1,55 @@
+<div class="oj-panel oj-flex oj-sm-flex-direction-column">
+  <div class="oj-flex-item">
+    <div class="oj-form">
+
+      <div>
+        <calendar data="{{calendarFirstParams}}"></calendar>
+      </div>
+      <div class="oj-margin-vertical">
+        <calendar data="{{calendarSecondParams}}"></calendar>
+      </div>
+
+      <div class="oj-margin">
+        <!-- ko foreach: parentData.filters -->
+        <hr>
+        <!-- ko foreach: { data: $data, as: 'item' } -->
+        <label data-bind="attr: {for: item.name}, text: item.name"></label>
+        <select data-bind="attr: {id: item.name}, ojComponent: {component: 'ojSelect', disabled: item.disabled, value: item.selectionItem,
+            options: item.data, optionChange: item.optionChange, rootAttributes: {'style': 'min-width: 8rem;'}}">
+          <!-- ko foreach: data -->
+          <option data-bind="value: code, text: name"></option>
+          <!-- /ko -->
+        </select>
+        <!-- /ko -->
+        <!-- /ko -->
+      </div>
+
+      <!-- ko if: checkboxes -->
+      <div class="oj-margin oj-flex oj-sm-justify-content-center">
+        <div id="articleStatusCheckboxSet" aria-labelledby="Article status checkboxes"
+             data-bind="ojComponent: {
+                component: 'ojCheckboxset',
+                value: parentData.checkboxes.value}" >
+          <!-- ko foreach: checkboxes -->
+          <div class="oj-flex">
+            <!-- ko foreach: $data -->
+            <div class="oj-flex-item" style="min-width: 4rem;">
+              <input data-bind="attr: {id: id, value: id}" type="checkbox">
+              <label data-bind="attr: {for: id}, text: label"></label>
+            </div>
+            <!--/ko-->
+          </div>
+          <!--/ko-->
+        </div>
+      </div>
+      <!--/ko-->
+
+      <div class="oj-flex oj-flex-items-pad">
+        <div class="oj-flex-item">
+          <button data-bind="click: apply, ojComponent:
+                {component: 'ojButton', label: 'Применить'}"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

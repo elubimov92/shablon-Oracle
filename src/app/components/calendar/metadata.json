@@ -1,0 +1,14 @@
+{
+  "name": "calendar",
+  "description": "A calendar with four period types available.",
+  "version": "1.0.0",
+  "jetVersion": ">=2.3.0",
+  "properties": {
+    "data": {
+      "description": "An object that contains app necessary app data. Should contain properties: 1) date 2) isLocalizationLoaded 3) type",
+      "type": "object"
+    }
+  },
+  "methods": {
+  }
+}

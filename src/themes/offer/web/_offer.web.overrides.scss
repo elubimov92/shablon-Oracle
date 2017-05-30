@@ -1,0 +1,26 @@
+// NOTE: JET component dom and/or selector names can change between releases,
+//       so each time JET is updated any overrides must be rechecked.
+
+// Partial override files
+//----------------------------------
+// - Modules
+@import "components/calendar";
+@import "components/sidePanel";
+// - Widgets
+@import "widgets/accordion";
+@import "widgets/applayout";
+@import "widgets/button";
+@import "widgets/collapsible";
+@import "widgets/formcontrol.listbox";
+@import "widgets/formcontrol.select";
+@import "widgets/navigationlist";
+@import "widgets/offcanvas";
+@import "widgets/panel";
+@import "widgets/tabs";
+// - Custom
+@import "custom/dropdowns";
+@import "custom/forms";
+@import "custom/header";
+@import "custom/icons";
+@import "custom/label";
+@import "custom/pages";

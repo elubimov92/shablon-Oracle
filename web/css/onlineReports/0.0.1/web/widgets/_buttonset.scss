@@ -1,0 +1,45 @@
+.oj-buttonset {
+  .oj-button-toggle {
+    border-color: $buttonBorderColor !important;
+    color: rgba(255, 255, 255, .6) !important;
+
+    &.selected, &.oj-selected {
+      color: #fff !important;
+    }
+  }
+  &#periodSelector {
+    .oj-button-toggle {
+      max-width: 10rem;
+
+      label {
+        span {
+          max-width: 7rem;
+          white-space: normal;
+          text-align: center;
+          text-overflow: clip;
+        }
+      }
+    }
+  }
+}
+
+.page-toggle {
+  .oj-button-toggle {
+    height: 5.46rem;
+    font-size: $mediumFontSize;
+    background-color: $buttonBgColor !important;
+    border-color: $buttonBgColor !important;
+
+    &.selected {
+      &:after {
+        content: "";
+        width: 6px;
+        height: 6px;
+        position: absolute;
+        bottom: 1rem;
+        border-radius: 50%;
+        background-color: $buttonTextColor;
+      }
+    }
+  }
+}

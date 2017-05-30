@@ -1,0 +1,169 @@
+<div class="oj-hybrid-padding">
+  <div id="pagePanel" class="oj-panel" style="min-width: 66vw; min-height: 100vh;">
+    <!--ko if: lgScreen-->
+    <div id="parameterDrawer" class="oj-offcanvas-start oj-flex-item oj-sm-6 oj-md-4 oj-xl-3 oj-hybrid-padding-end">
+      <side-panel data="{{rootData.sidePanelParams().data}}" apply="[[rootData.sidePanelParams().apply]]"
+                  style="height: 100%;"></side-panel>
+    </div>
+    <!--/ko-->
+    <div class="oj-offcanvas-outer-wrapper">
+      <!--Top panel module-->
+      <div id="topPanel" class="oj-offcanvas-top oj-panel oj-panel-alt"
+           data-bind="ojModule: { name: 'topPanel', params: topPanelModuleParams }" style="min-height: 100px"></div>
+      <div class="oj-hybrid-padding">
+        <div class="flex-block oj-flex-item flex-active">
+          <div class="name">Qos</div>
+          <div class="value">157</div>
+        </div>
+        <div class="flex-block oj-flex-item">
+          <div class="name">In Time</div>
+          <div class="value">98%</div>
+        </div>
+        <div class="flex-block oj-flex-item">
+          <div class="name">Losses</div>
+          <div class="value">98%</div>
+        </div>
+        <div class="flex-block oj-flex-item">
+          <div class="name">Payment Delay</div>
+          <div class="value">2664</div>
+        </div>
+        <div class="flex-block oj-flex-item">
+          <div class="name">Out of stock</div>
+          <div class="value">104%</div>
+        </div>
+      </div>
+      <div id="hybrid-1" class="oj-hybrid-padding">
+        <div class="oj-flex-item">
+          <div class="oj-hybrid-padding">
+
+            <div id='chart-container'>
+
+              <!--<div id="legend1"-->
+              <!--aria-controls="barChart2"-->
+              <!--data-bind="ojComponent: {-->
+              <!--component: 'ojLegend',-->
+              <!--orientation: 'horizontal',-->
+              <!--sections: legendSections,-->
+              <!--halign: 'center', valign: 'middle',-->
+              <!--hiddenCategories: hiddenCategoriesValue,-->
+              <!--hideAndShowBehavior: 'on'-->
+              <!--}"-->
+              <!--style="width:100%; height:25px;">-->
+              <!--</div>-->
+
+              <div class="oj-flex-item bar-chart">
+                <div id="barChart2" data-bind="ojComponent: {
+                component: 'ojChart',
+                type: 'bar',
+                series: timeSeriesValue,
+                groups: timeGroupsValue,
+                yAxis: {tickLabel: {converter: ko.toJS(numberConverter)}},
+                animationOnDisplay: 'auto',
+                animationOnDataChange: 'auto',
+                legend: {rendered: 'off'}}"
+                     style="width:95%;height:225px;">
+                </div>
+              </div>
+              <br clear="both"/>
+              <div class="oj-flex-item padding bar-chart">
+                <table id="table" summary="Department List" aria-label="Departments Table"
+                       data-bind="ojComponent: {component: 'ojTable',
+                                data: datasource,
+                                columnsDefault: {sortable: 'none'},
+                                columns: [{headerText: 'NAME',
+                                           field: 'Name'},
+                                          {headerText: 'VALUE',
+                                           field: 'value'}]}"
+                       style="width: 95%">
+                  <!--{headerText: 'Location Id',-->
+                  <!--field: 'LocationId'},-->
+                  <!--{headerText: 'Manager Id',-->
+                  <!--field: 'ManagerId'}]}">-->
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="hybrid-2" class="oj-hybrid-padding">
+        <div class="oj-flex-item bar-chart">
+          <div class="oj-hybrid-padding">
+            <div id='chart-container2' class="hidden">
+              <div id="lineChart1" data-bind="ojComponent: {
+        component: 'ojChart',
+        type: 'line',
+        series: lineSeriesValue,
+        groups: lineGroupsValue,
+        animationOnDisplay: 'auto',
+        animationOnDataChange: 'auto',
+        orientation: orientationValue,
+        hoverBehavior: 'dim'
+        }"
+                   style="width:95%;height:350px;">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+      <div id="hybrid-3" class="oj-hybrid-padding">
+        <div class="oj-flex-item bar-chart">
+          <div class="oj-hybrid-padding">
+            <div id='chart-container3'>
+              <div id="lineChart2" data-bind="ojComponent: {
+        component: 'ojChart',
+        type: 'line',
+        series: lineSeriesValue,
+        groups: lineGroupsValue,
+        animationOnDisplay: 'auto',
+        animationOnDataChange: 'auto',
+        orientation: orientationValue,
+        hoverBehavior: 'dim'
+        }"
+                   style="width:95%;height:350px;">
+              </div>
+            </div>
+            <div class="oj-hybrid-padding">
+              <div class="oj-flex-item bar-chart">
+                <div id='chart-container4'>
+                  <div id="pieChart" data-bind="ojComponent: {
+                  component: 'ojChart',
+                  type: 'pie',
+                  series: pieSeriesValue,
+                  dataLabel: pieSliceLabel,
+                  hoverBehavior: 'dim'
+                                            }"
+                       style="width:45%;height:350px;margin-top: 10px;display: inline-block;float: left;">
+                  </div>
+                </div>
+              </div>
+
+              <div class="oj-flex-item bar-chart">
+                <div id='chart-container5'>
+                  <div id="barChart3" data-bind="ojComponent: {
+                component: 'ojChart',
+                type: 'bar',
+                series: timeSeriesValue,
+                groups: timeGroupsValue,
+                yAxis: {tickLabel: {converter: ko.toJS(yAxisConverter)}},
+                animationOnDisplay: 'auto',
+                animationOnDataChange: 'auto',
+                legend: {rendered: 'off'}}"
+                       style="width:45%;height:225px;display: inline-block;float: left;">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="togglers-container">
+    <div id="tog1" class="toggler toggler-active"><i class="active"></i></div>
+    <div id="tog2" class="toggler"><i></i></div>
+    <div id="tog3" class="toggler"><i></i></div>
+  </div>
+</div>
+</div>
+</div>

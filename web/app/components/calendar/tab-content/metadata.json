@@ -1,0 +1,14 @@
+{
+  "name": "calendar-tab-content",
+  "description": "Content of a calendar tab.",
+  "version": "1.0.0",
+  "jetVersion": ">=2.3.0",
+  "properties": {
+    "data": {
+      "description": "An object that contains app necessary app data. Should contain properties: 1) firstDate 2) secondDate 3) info 4) formatDate 5) popup",
+      "type": "object"
+    }
+  },
+  "methods": {
+  }
+}

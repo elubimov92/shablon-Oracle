@@ -1,0 +1,21 @@
+{
+  "name": "side-panel",
+  "description": "Side panel with app parameters.",
+  "version": "1.0.0",
+  "jetVersion": ">=2.3.0",
+  "properties": {
+    "data": {
+      "description": "An object that contains app necessary app data",
+      "type": "object"
+    },
+    "apply": {
+      "description": "A function that will be toggled on apply button click",
+      "type": "function"
+    }
+  },
+  "methods": {
+    "toggle": {
+      "description": "Toggles panel"
+    }
+  }
+}

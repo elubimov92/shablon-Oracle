@@ -1,0 +1,85 @@
+<div class="oj-flex oj-sm-flex-wrap-nowrap oj-sm-align-items-center">
+
+  <div class="oj-flex-item oj-sm-8">
+
+    <!-- Day and week tabs only -->
+    <div class="oj-margin-start oj-flex" data-bind="visible: isDayOrWeekCalendar()">
+
+      <div class="oj-flex-item oj-flex oj-sm-flex-items-initial oj-sm-align-items-center oj-sm-justify-content-center">
+        <div class="oj-flex-item">
+          <button class='num-day btn-circle' data-bind="ojComponent:
+                    {
+                      component: 'ojButton',
+                      label: state.firstDate
+                    },
+                    click: function() {
+                      togglePopup(false);
+                    }">
+          </button>
+        </div>
+        <div class="oj-flex-item month-year">
+          <div data-bind="text: state.firstMonth"></div>
+          <div data-bind="text: state.firstYear"></div>
+        </div>
+        <!-- ko if: calendar.info.type() === 'week' || !calendar.info.singleDate() -->
+        <div class="oj-flex-item">
+          <button class='num-day btn-circle' data-bind="ojComponent:
+                  {
+                    component: 'ojButton',
+                    label: state.secondDate
+                  },
+                  click: function() {
+                    togglePopup(true);
+                  }">
+          </button>
+        </div>
+        <div class="oj-flex-item month-year">
+          <div data-bind="text: state.secondMonth"></div>
+          <div data-bind="text: state.secondYear"></div>
+        </div>
+        <!-- /ko -->
+      </div>
+
+    </div>
+
+    <!-- Month tab only -->
+    <div class="month-content" data-bind="visible: calendar.info.type() === 'month'">
+      <button class='num-day btn-circle' data-bind="ojComponent:
+                {
+                  component: 'ojButton',
+                  label: monthLabel
+                },
+                click: function() {
+                  togglePopup(false);
+                }">
+      </button>
+    </div>
+
+    <!-- Year tab only -->
+    <div class="year-content" data-bind="visible: calendar.info.type() === 'year'">
+      <button class='num-day btn-circle' data-bind="ojComponent:
+                {
+                  component: 'ojButton',
+                  label: state.firstYear
+                }">
+      </button>
+    </div>
+
+  </div>
+
+  <div class="oj-flex-item">
+
+    <button class="btn-calendar-img" data-bind="ojComponent:
+                {
+                  component: 'ojButton',
+                  display: 'icons',
+                  icons: {start:'oj-fwk-icon oj-fwk-icon-calendar'}
+                },
+                click: function() {
+                  togglePopup(false);
+                }">
+    </button>
+
+  </div>
+
+</div>

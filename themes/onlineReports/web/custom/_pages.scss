@@ -1,0 +1,14 @@
+#page-content {
+  min-height: calc(100vh - #{$headerHeight});
+}
+
+#page-content-login {
+  >.oj-hybrid-padding {
+    margin-top: $headerHeight;
+  }
+}
+
+.create-report-page-body {
+  height: 46rem;
+  overflow-y: scroll;
+}

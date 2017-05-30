@@ -1,0 +1,67 @@
+<div class="oj-flex oj-sm-flex-direction-column">
+  <div class="oj-flex-item">
+    <div class="oj-form">
+      <div class="oj-flex oj-sm-flex-items-initial oj-flex-items-pad">
+        <div class="oj-flex-item">
+          <div data-bind="ojModule: { name: 'components/calendar/calendar', params: calendarParamsFirst}"></div>
+        </div>
+        <div class="oj-flex-item">
+          <div data-bind="ojModule: { name: 'components/calendar/calendar', params: calendarParamsSecond}"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ko foreach: parentData.filters -->
+  <div class="oj-flex-item">
+    <hr>
+    <div class="oj-form">
+      <div class="oj-flex oj-sm-flex-items-initial oj-flex-items-pad">
+        <!-- ko foreach: { data: $data, as: 'item' } -->
+        <div class="oj-flex-item">
+          <label data-bind="attr: {for: item.name}, text: item.name"></label>
+          <select data-bind="attr: {id: item.name}, ojComponent: {component: 'ojSelect', disabled: item.disabled, value: item.selectionItem,
+            options: item.data, optionChange: item.optionChange}">
+            <!-- ko foreach: data -->
+            <option data-bind="value: code, text: name"></option>
+            <!-- /ko -->
+          </select>
+        </div>
+        <!-- /ko -->
+      </div>
+    </div>
+  </div>
+  <!-- /ko -->
+
+  <!-- ko if: parentData.checkboxes -->
+  <div class="oj-margin oj-flex-item">
+    <div class='oj-flex-bar-middle'>
+      <div id="articleStatusCheckbox" aria-labelledby="articlestatus"
+           data-bind="ojComponent: {
+              component: 'ojCheckboxset',
+              value: parentData.checkboxes.value}" >
+        <!-- ko foreach: parentData.checkboxes.list -->
+        <span class="oj-choice-row-inline">
+            <input data-bind="attr: {id: id, value: id}" type="checkbox">
+            <label data-bind="attr: {for: id}, text: label"></label>
+          </span>
+        <!-- /ko -->
+      </div>
+    </div>
+  </div>
+  <!-- /ko -->
+
+  <div class="oj-flex-item">
+    <div class="oj-form">
+      <div class="oj-flex oj-flex-items-pad">
+        <div class="oj-flex-item">
+          <button data-bind="click: function() { parentData.apply(); parentData.toggleDrawer(); }, ojComponent:
+                {component: 'ojButton', label: 'Применить'}"></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<button class="oj-panel-remove-button" data-bind="click: function() { parentData.toggleDrawer(); },
+  ojComponent: { component:'ojButton', chroming: 'half', display: 'icons', icons: {start: 'oj-panel-remove-icon'}}">
+</button>

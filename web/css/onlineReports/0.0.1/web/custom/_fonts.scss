@@ -1,0 +1,47 @@
+@font-face {
+  font-family: "Ubuntu";
+  src: url($fontDir + "ubuntu-b.eot");
+  src: url($fontDir + "ubuntu-b.eot?#iefix") format("embedded-opentype"),
+  url($fontDir + "ubuntu-b.woff2") format("woff2"),
+  url($fontDir + "ubuntu-b.woff") format("woff"),
+  url($fontDir + "ubuntu-b.ttf") format("truetype"),
+  url($fontDir + "ubuntu-b.svg#ubuntubold") format("svg");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url($fontDir + "ubuntu-m.eot");
+  src: url($fontDir + "ubuntu-m.eot?#iefix") format("embedded-opentype"),
+  url($fontDir + "ubuntu-m.woff2") format("woff2"),
+  url($fontDir + "ubuntu-m.woff") format("woff"),
+  url($fontDir + "ubuntu-m.ttf") format("truetype"),
+  url($fontDir + "ubuntu-m.svg#ubuntumedium") format("svg");
+  font-weight: 500;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url($fontDir + "ubuntu-r.eot");
+  src: url($fontDir + "ubuntu-r.eot?#iefix") format("embedded-opentype"),
+  url($fontDir + "ubuntu-r.woff2") format("woff2"),
+  url($fontDir + "ubuntu-r.woff") format("woff"),
+  url($fontDir + "ubuntu-r.ttf") format("truetype"),
+  url($fontDir + "ubuntu-r.svg#ubunturegular") format("svg");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Ubuntu Condensed";
+  src: url($fontDir + "ubuntu-c.eot");
+  src: url($fontDir + "ubuntu-c.eot?#iefix") format("embedded-opentype"),
+  url($fontDir + "ubuntu-c.woff2") format("woff2"),
+  url($fontDir + "ubuntu-c.woff") format("woff"),
+  url($fontDir + "ubuntu-c.ttf") format("truetype"),
+  url($fontDir + "ubuntu-c.svg#ubuntubold") format("svg");
+  font-weight: 100;
+  font-style: normal;
+}

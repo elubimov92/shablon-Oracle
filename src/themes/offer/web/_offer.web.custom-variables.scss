@@ -1,0 +1,117 @@
+// General
+//----------------------------------
+// - Default
+// -- Background
+// --- Color
+$contrastBgColor: #182933;
+$contrastBgColor2: #1d2f3b;
+
+// Accordion
+//----------------------------------
+$accordionHeaderBgColor: #ed1c24;
+
+// Button - circle
+//----------------------------------
+// - Default
+// -- Width
+$circleButtonDiameter: 54px;
+// -- Margin
+// --- Vertical
+$circleHeaderButtonVerticalMargin: 5px;
+
+// Button - outlined
+//----------------------------------
+// - Default
+// -- Border
+// --- Color
+$buttonOutlinedChromeBorderColorActive: #fff !default;
+
+// Calendar
+$calendarPopupBgColor: $contrastBgColor;
+$calendarPopupHeaderBgColor: $contrastBgColor2;
+
+// Dropdown
+//----------------------------------
+// - Default
+// -- Color
+$dropdownTextColor: rgba(25, 41, 51, 1);
+// -- Background
+// --- Color
+$dropdownBgColor: #fff;
+// -- Border
+// --- Color
+$dropdownBorderColor: #eaeaea;
+// -- Font
+// --- Size
+$dropdownFontSizeFirst: 18px;
+$dropdownFontSizeSecond: 15px;
+// -- Animation
+$dropdownAnimationDuration: .3s;
+// -- Other
+$dropdownTabHeight: 62px;
+
+// Dropdown select app
+//----------------------------------
+// - Default
+// -- Width
+$dropdownSelectAppWidth: 380px;
+// -- Height
+$dropdownSelectAppHeight: 173px;
+
+// Dropdown user info
+//----------------------------------
+// - Default
+// -- Width
+$dropdownUserInfoWidth: 465px;
+// -- Height
+$dropdownUserInfoHeight: 227px;
+// -- Other
+$dropdownUserInfoResponsiveTopOffset: 100px;
+
+// Icon
+//----------------------------------
+// - Default
+// -- Paths
+$iconSettingsPath: '../../../images/settings.png';
+$iconSettingsHoverPath: '../../../images/settings_hover.png';
+$iconBranchPath: '../../../images/stat_info_16.png';
+$iconHomePath: '../../../images/stat_info_16.png';
+$iconClockPath: '../../../images/stat_info_16.png';
+$iconSocialPath: '../../../images/stat_info_16.png';
+$iconMorePath: '../../../images/stat_info_16.png';
+
+// Input
+//----------------------------------
+$inputTextColor: #676b73;
+$inputBgColor: rgba(246, 249, 252, 1);
+
+// Images
+//----------------------------------
+$circleAvatarImageDiameter: 54px;
+
+// Header
+//----------------------------------
+$headerHeight: 65px;
+
+// Listbox
+//----------------------------------
+// - Default
+// -- Color
+$listboxItemLabelColorDefault: $contrastTextColor;
+// -- Background
+// --- Color
+$listboxBgColor: $contrastBgColor;
+// - Focus
+// -- Background
+// --- Color
+$listboxBgColorFocus: $contrastBgColor2;
+
+// Navigation list
+//----------------------------------
+// - Default
+// -- Font
+$navigationListFontSize: $fontSize;
+
+// Other
+//----------------------------------
+$avatarPlaceholderFontSize: 32px;
